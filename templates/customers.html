@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% for customer in customer_list %}
+<div class="card">
+    <div class="card-header">
+      S.No.:- {{loop.index}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{customer.name}}</h5>
+      <p class="card-text">Address: {{customer.address}} Email:{{customer.email}}</p>
+      <p class="card-text">Email: {{customer.email}}</p>
+      <a href="#" class="btn btn-outline-danger">Update</a>
+    </div>
+  </div>
+
+  {% endfor %}
+{% endblock %}
